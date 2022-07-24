@@ -1,8 +1,8 @@
 import React from 'react';
 import { string } from 'prop-types';
-import GithubIcon from '../res/images/github_icon.png';
+import GithubIcon from '../images/github_icon.png';
 
-const ImageLink = props => (
+const ImageLink = (props) => (
   <div className={props.className}>
     <a href={props.href}>
       <img src={props.src} alt={props.alt} width="24" height="24" />
@@ -10,7 +10,7 @@ const ImageLink = props => (
   </div>
 );
 
-const Footer = props => (
+const Footer = () => (
   <footer className="footer">
     <ImageLink
       alt="GitHub Inc."

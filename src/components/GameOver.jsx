@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import CloseIcon from '../images/close_icon.png';
 import { GameBoard } from './Game.js';
 import { ImageLink } from './Footer.js';
 
-import CloseIcon from '../res/images/close_icon.png';
-
-//Game over status for game ending
-const GameOver = props => (
+const GameOver = (props) => (
   <div className="game-over">
     <h1>{props.status}</h1>
     <ImageLink
