@@ -1,7 +1,7 @@
 {
   "name": "tic-tac-toe",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "~5.16.4",
     "@testing-library/react": "~13.3.0",
@@ -31,7 +31,6 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-import": "^2.26.0",
-    "prop-types": "~15.8.1"
+    "eslint-plugin-import": "^2.26.0"
   }
 }
