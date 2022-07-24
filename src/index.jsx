@@ -1,6 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
+import { createRoot } from 'react-dom/client';
+import GameProvider from './provider/GameProvider';
 import GameContainer from './components/GameContainer';
 
-ReactDOM.render(<GameContainer />, document.getElementById('root'));
+const App = () => (
+  <GameProvider>
+    <GameContainer />
+  </GameProvider>
+);
+
+const root = createRoot(document.getElementById('root'));
+
+root.render(<App />);

@@ -1,5 +1,5 @@
-{
-  trailingComma: 'es5',
+module.exports = {
+  trailingComma: 'none',
   printWidth: 80,
   tabWidth: 2,
   semi: true,
@@ -9,8 +9,8 @@
     {
       files: ['*.html'],
       options: {
-        printWidth: 999,
-      },
-    },
-  ],
-}
+        printWidth: 999
+      }
+    }
+  ]
+};

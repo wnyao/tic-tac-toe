@@ -1,31 +1,14 @@
 import React from 'react';
-import { string } from 'prop-types';
 import GithubIcon from '../images/github_icon.png';
-
-const ImageLink = (props) => (
-  <div className={props.className}>
-    <a href={props.href}>
-      <img src={props.src} alt={props.alt} width="24" height="24" />
-    </a>
-  </div>
-);
 
 const Footer = () => (
   <footer className="footer">
-    <ImageLink
-      alt="GitHub Inc."
-      className="footer__imagelink"
-      href="https://github.com/wnyao/tic-tac-toe"
-      src={GithubIcon}
-    />
+    <div className="footer__imagelink">
+      <a href="https://github.com/wnyao/tic-tac-toe">
+        <img src={GithubIcon} alt="GitHub Inc." width="24" height="24" />
+      </a>
+    </div>
   </footer>
 );
 
-ImageLink.propTypes = {
-  alt: string,
-  className: string,
-  href: string.isRequired,
-  src: string.isRequired,
-};
-
-export { Footer, ImageLink };
+export default Footer;

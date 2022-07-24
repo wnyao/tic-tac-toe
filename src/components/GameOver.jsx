@@ -1,33 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
+import React, { useContext } from 'react';
 import CloseIcon from '../images/close_icon.png';
-import { GameBoard } from './Game';
-import { ImageLink } from './Footer';
+import { GameContext } from '../provider/GameProvider';
+import GameBoard from './GameBoard';
 
-const GameOver = (props) => (
-  <div className="game-over">
-    <h1>{props.status}</h1>
-    <ImageLink
-      alt="Close"
-      className="game-over__imagelink"
-      href="https://tic-tae-toe.netlify.com/"
-      src={CloseIcon}
-    />
-    <GameBoard
-      className="game-over__board"
-      squares={props.squares}
-      winningLine={props.winningLine}
-      onClick={props.onSquareClick}
-    />
-  </div>
-);
+const GameOver = () => {
+  const { winner, onReset } = useContext(GameContext);
 
-GameOver.propTypes = {
-  status: PropTypes.string,
-  winningLine: PropTypes.arrayOf(PropTypes.number).isRequired,
-  squares: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onClick: PropTypes.func,
+  const status = (() => {
+    if (!winner && history.length !== 10) return undefined;
+    if (winner) return `Winner: ${winner}`;
+    return 'Draw';
+  })();
+
+  if (!status) {
+    return null;
+  }
+
+  return (
+    <div className="game-over">
+      <h1>{status}</h1>
+
+      <div className="game-over__imagelink" onClick={onReset}>
+        <img src={CloseIcon} alt="Close" width="24" height="24" />
+      </div>
+
+      <GameBoard />
+    </div>
+  );
 };
 
 export default GameOver;
