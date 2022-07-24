@@ -1,0 +1,5 @@
+{
+  extends: 'wnyao',
+  rules: {},
+  ignorePatterns: tsConfig.exclude
+}
