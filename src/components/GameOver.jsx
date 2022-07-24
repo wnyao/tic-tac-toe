@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import CloseIcon from '../images/close_icon.png';
-import { GameBoard } from './Game.js';
-import { ImageLink } from './Footer.js';
+import { GameBoard } from './Game';
+import { ImageLink } from './Footer';
 
 const GameOver = (props) => (
   <div className="game-over">

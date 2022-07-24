@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Game } from './Game.js';
-import GameOver from './GameOver.js';
-import List from './List.js';
+import { Game } from './Game';
+import GameOver from './GameOver';
+import List from './List';
 
 import '../style/index.css';
 
@@ -63,7 +63,7 @@ class GameContainer extends Component {
     });
   };
 
-  jumpTo = move => {
+  jumpTo = (move) => {
     let { isDesc, history, moves } = this.state;
 
     const from = isDesc ? 0 : history.length - (move + 1);
@@ -96,7 +96,7 @@ class GameContainer extends Component {
   };
 
   // Generate block elements history list
-  genHistoryList = stepNum => {
+  genHistoryList = (stepNum) => {
     const { history, isDesc } = this.state;
     const moves = history.map((step, move) => {
       const index = isDesc ? move : history.length - move - 1; // index order based according to sorting order

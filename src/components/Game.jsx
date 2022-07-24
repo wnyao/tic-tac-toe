@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Button, Board } from './Board.js';
-import { Footer } from './Footer.js';
+import { Button, Board } from './Board';
+import { Footer } from './Footer';
 
-const ToggleButton = props => (
+const ToggleButton = (props) => (
   <Button
     className="game-info__field__button"
     onClick={props.onClick}
@@ -12,13 +12,13 @@ const ToggleButton = props => (
   />
 );
 
-const AppTitle = props => (
+const AppTitle = (props) => (
   <header className="header">
     <h1>Tic Tac Toe</h1>
   </header>
 );
 
-const GameBoard = props => (
+const GameBoard = (props) => (
   <div className={props.className}>
     <Board
       winningLine={props.winningLine}
@@ -28,7 +28,7 @@ const GameBoard = props => (
   </div>
 );
 
-const GameInfo = props => {
+const GameInfo = (props) => {
   const { onClick, value, historyList, status } = props;
   return (
     <div className="game-info">
@@ -44,7 +44,7 @@ const GameInfo = props => {
   );
 };
 
-const Game = props => {
+const Game = (props) => {
   const {
     value,
     status,

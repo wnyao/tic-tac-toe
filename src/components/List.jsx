@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const List = props => (
+const List = (props) => (
   <div className="list">
     <button
       className="list__button"
