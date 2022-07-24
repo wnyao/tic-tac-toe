@@ -1,7 +1,5 @@
 # Tic-Tac-Toe
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ef82a2ac-0e78-4055-83c3-4ccb5829bbc2/deploy-status)](https://app.netlify.com/sites/tic-tae-toe/deploys)
-
 Check the preview [here](https://tic-tae-toe.netlify.com/)
 
 ![Preview](https://github.com/wnyao/tic-tac-toe/blob/master/screenshots/tic_tac_toe.jpg)
