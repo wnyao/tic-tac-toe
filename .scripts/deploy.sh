@@ -8,9 +8,7 @@ buildImage() {
   latest="$1:latest"
   file="$2"
 
-  docker build --rm -f "$file" -t "$image" .
-  docker build --rm -f "$file" -t "$latest" .
-
+  docker build --rm -f "$file" -t "$image" -t "$latest" .
   echo "$CR_PAT" | docker login ghcr.io -u USERNAME --password-stdin
   docker push "$image"
   docker push "$latest"
