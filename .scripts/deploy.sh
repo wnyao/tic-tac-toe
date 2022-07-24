@@ -10,6 +10,8 @@ buildImage() {
 
   docker build --rm -f "$file" -t "$image" .
   docker build --rm -f "$file" -t "$latest" .
+
+  echo "$CR_PAT" | docker login ghcr.io -u USERNAME --password-stdin
   docker push "$image"
   docker push "$latest"
 }
@@ -37,5 +39,5 @@ deployClient() {
   fi
 }
 
-# buildClient
+buildClient
 deployClient
