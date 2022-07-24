@@ -1,0 +1,7 @@
+version: '3'
+
+services: 
+  tictactoe:
+    image: ghcr.io/wnyao-dev/tic-tac-toe:latest
+    ports: 
+      - 80:80
