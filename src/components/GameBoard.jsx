@@ -22,7 +22,7 @@ const GameBoard = () => {
             })}
             onClick={() => onSquareClick(count)}
           >
-            {label}
+            <p>{label}</p>
           </button>
         );
       })}

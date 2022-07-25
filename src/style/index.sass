@@ -1,3 +1,6 @@
+#root 
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1)
+
 body 
   margin: 0px
   font-weight: bold
@@ -44,9 +47,13 @@ button
   &.match
     background: #e4e5e9
     font-size: 32px
-    color: white
 
-  &.isPlayerX 
+    p 
+      color: white
+      animation: blink 0.3s steps(5, start) infinite
+      -webkit-animation: blink 0.3s steps(5, start) infinite
+
+  &.isPlayerX
     color: #fbb8c9
 
   &.isPlayerO
@@ -172,3 +179,14 @@ button
 
   .header > h1 
     margin: 40px 0px 20px 20px
+
+@keyframes blink 
+  to 
+    visibility: hidden
+  
+@keyframes fadeIn 
+  0%  
+    opacity: 0 
+  100%  
+    opacity: 1
+

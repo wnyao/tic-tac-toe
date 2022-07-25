@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import CloseIcon from '../images/close_icon.png';
 import { GameContext } from '../provider/GameProvider';
 import GameBoard from './GameBoard';
+import Footer from './Footer';
 
 const GameOver = () => {
-  const { winner, onReset } = useContext(GameContext);
+  const { winner, history, onReset } = useContext(GameContext);
 
   const status = (() => {
     if (!winner && history.length !== 10) return undefined;
@@ -25,6 +26,7 @@ const GameOver = () => {
       </div>
 
       <GameBoard />
+      <Footer />
     </div>
   );
 };
