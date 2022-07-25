@@ -2,6 +2,8 @@ version: '3'
 
 services: 
   tictactoe:
-    image: ghcr.io/wnyao-dev/tic-tac-toe:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports: 
       - 80:80
