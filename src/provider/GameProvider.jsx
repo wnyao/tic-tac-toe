@@ -57,6 +57,7 @@ const GameProvider = ({ children }) => {
   };
 
   const onBack = (index) => {
+    setRound(history[index]);
     setHistory([...history.slice(0, index + 1)]);
     setStep([...step.slice(0, index + 1)]);
   };

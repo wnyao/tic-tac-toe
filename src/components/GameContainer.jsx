@@ -6,9 +6,10 @@ import GameOver from './GameOver';
 import '../style/index.sass';
 
 const GameContainer = () => {
-  const { winner } = useContext(GameContext);
+  const { winner, history } = useContext(GameContext);
+  const hasEnded = winner || history.length === 10;
 
-  return <>{winner ? <GameOver /> : <Game />}</>;
+  return <>{hasEnded ? <GameOver /> : <Game />}</>;
 };
 
 export default GameContainer;
