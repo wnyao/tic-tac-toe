@@ -1,6 +1,6 @@
 # Tic-Tac-Toe
 
-Check the preview [here](https://tic-tac-toe.wnyao.dev)
+Check the preview [here](https://tic-tac-toe-hazel-ten-54.vercel.app/)
 
 ![Preview](./public/images/main.png)
 
