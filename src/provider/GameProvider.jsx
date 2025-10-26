@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { createContext, useState } from 'react';
 
 export const GameContext = createContext({});
 
@@ -42,11 +42,7 @@ const GameProvider = ({ children }) => {
   const { line: winnerHand = [], winner } = calculateWinner(currentRecord);
 
   const onSquareClick = (index) => {
-    const record = [
-      ...round.slice(0, index),
-      player,
-      ...round.slice(index + 1, round.length)
-    ];
+    const record = [...round.slice(0, index), player, ...round.slice(index + 1, round.length)];
 
     if (round[index]) return;
 
@@ -73,19 +69,19 @@ const GameProvider = ({ children }) => {
   return (
     <GameContext.Provider
       value={{
+        currentRecord,
         history,
         isDesc,
-        step,
         isX,
         player,
-        currentRecord,
-        winnerHand,
+        step,
         winner,
+        winnerHand,
 
-        onSquareClick,
         onBack,
+        onReset,
         onSort,
-        onReset
+        onSquareClick
       }}
     >
       {children}

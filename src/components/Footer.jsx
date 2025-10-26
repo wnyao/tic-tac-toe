@@ -1,4 +1,5 @@
 import React from 'react';
+
 import GithubIcon from '../images/github_icon.png';
 
 const Footer = () => (

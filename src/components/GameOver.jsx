@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
+
 import CloseIcon from '../images/close_icon.png';
 import { GameContext } from '../provider/GameProvider';
-import GameBoard from './GameBoard';
 import Footer from './Footer';
+import GameBoard from './GameBoard';
 
 const GameOver = () => {
   const { winner, history, onReset } = useContext(GameContext);

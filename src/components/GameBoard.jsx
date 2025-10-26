@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
+import { clsx } from 'clsx';
+
 import { GameContext } from '../provider/GameProvider';
-import { cls } from '../util/index';
 
 const GameBoard = () => {
   const { currentRecord, winnerHand, onSquareClick } = useContext(GameContext);
@@ -14,7 +15,7 @@ const GameBoard = () => {
         return (
           <button
             key={count}
-            className={cls({
+            className={clsx({
               match: hasMatch,
               isPlayerX: label === 'X',
               isPlayerO: label === 'O',

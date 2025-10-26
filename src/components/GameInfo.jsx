@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+
 import { GameContext } from '../provider/GameProvider';
 import History from './History';
 

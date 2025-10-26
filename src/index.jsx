@@ -1,7 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import GameProvider from './provider/GameProvider';
+
 import GameContainer from './components/GameContainer';
+import GameProvider from './provider/GameProvider';
 
 const App = () => (
   <GameProvider>

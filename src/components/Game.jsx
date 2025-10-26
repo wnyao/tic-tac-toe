@@ -1,7 +1,8 @@
 import React from 'react';
+
+import Footer from './Footer';
 import GameBoard from './GameBoard';
 import GameInfo from './GameInfo';
-import Footer from './Footer';
 
 const Game = () => (
   <div className="game">

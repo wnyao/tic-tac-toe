@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+
 import { GameContext } from '../provider/GameProvider';
 
 const rows = [
@@ -18,18 +19,11 @@ const History = () => {
         const current = step[adjustedIndex];
         const row = Math.floor(current / 3) + 1;
 
-        const column = rows.reduce(
-          (acc, list) => (list.includes(current) ? list.indexOf(current) : acc),
-          0
-        );
+        const column = rows.reduce((acc, list) => (list.includes(current) ? list.indexOf(current) : acc), 0);
 
-        const description = index
-          ? `Back to #${adjustedIndex}`
-          : 'Go to game start';
+        const description = index ? `Back to #${adjustedIndex}` : 'Go to game start';
 
-        const message = !index
-          ? 'Place your move on a number'
-          : `Move #${index} at (${row}, ${column})`;
+        const message = !index ? 'Place your move on a number' : `Move #${index} at (${row}, ${column})`;
 
         return (
           <div className="list" key={record.join('')}>
